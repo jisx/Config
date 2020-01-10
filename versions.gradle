@@ -158,13 +158,6 @@ static def addRepos(RepositoryHandler handler) {
     handler.maven { url "http://maven.icm.edu.pl/artifactory/repo/" }
     handler.maven { url "https://dl.bintray.com/umsdk/release" }
     handler.maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
-    handler.maven {
-        url "http://172.16.168.172:9015/DefaultCollection/_packaging/Ezy/maven/v1"
-        credentials {
-            username "aar"
-            password "ngackuesyirccvj33xube4wrxlxk5pf4bm6nbhzqimolpb2iwwwa"
-        }
-    }
 }
 
 ext.dependence = config
