@@ -1,0 +1,173 @@
+def versions = [:]
+versions.androidGradlePlugin = '3.5.3'//gradle 的插件版本
+versions.kotlin = "1.3.50"  //kotlin插件版本
+versions.multidex = '2.0.1'
+versions.constraint_layout = '1.1.3'//约束布局
+versions.androidx = '1.0.0'
+versions.work = '2.2.0'
+
+versions.dagger = "2.25.4"
+versions.glide = "4.10.0"
+
+versions.rxjava2 = "2.2.16"
+versions.rx_android = "2.1.1"
+versions.retrofit = "2.7.1"
+versions.okhttp = "3.14.1"
+
+versions.gson = "2.8.6"
+versions.permission = "0.10.2"//权限
+versions.logger = "2.2.0"
+versions.compress = "1.19"//解压
+versions.zip = "1.13" //压缩
+versions.protobuf = "3.4.0" //数据协议
+versions.protoc = "3.4.0" //数据协议
+versions.umeng_analytics = "8.0.0"//友盟游戏SDK包(包含所有统计SDK功能及接口)
+versions.umeng_common = "2.0.0" //友盟基础组件包
+versions.chart = "v3.1.0" //柱状体
+versions.calendar = "1.4.3" //柱状体
+versions.iink = "3.4.0"//手势识别
+
+versions.zykjBase = "1.0.1-SNAPSHOT"//基础类
+versions.zykjUtils = "0.0.1-SNAPSHOT"//工具列
+versions.zykjMessageClient = "1.2.3"//进程通讯客户端
+versions.zykjMessageServer = "1.2.2"//进程通讯服务端
+versions.zykjCamera = "1.0.10"//照相机
+versions.zykjSketch = "0.1.0-SNAPSHOT"//画板
+
+versions.junit = "4.12"
+versions.test_runner = "1.2.0"
+versions.test_ext = "1.1.1"
+versions.test_espresso = "3.2.0"
+
+//router
+versions.arouter_compiler = "1.2.2"
+versions.arouter_api = "1.4.1"
+
+def config = [:]
+
+config.androidGradlePlugin = "com.android.tools.build:gradle:$versions.androidGradlePlugin"
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+config.kotlin = kotlin
+
+def androidx = [:]
+androidx.constraintLayout = "androidx.constraintlayout:constraintlayout:$versions.constraint_layout"
+androidx.work = "androidx.work:work-runtime:$versions.work"
+androidx.annotations = "androidx.annotation:annotation:$versions.androidx"
+androidx.material = "com.google.android.material:material:$versions.androidx"
+androidx.appcompat = "androidx.appcompat:appcompat:$versions.androidx"
+androidx.percent = "androidx.percentlayout:percentlayout:$versions.androidx" //比例控件
+androidx.recyclerView = "androidx.recyclerview:recyclerview:$versions.androidx"
+androidx.cardView = "androidx.cardview:cardview:$versions.androidx"
+androidx.multidex = "androidx.multidex:multidex:$versions.multidex"
+config.androidx = androidx
+
+//网络请求
+def okHttp = [:]
+okHttp.logging= "com.squareup.okhttp3:logging-interceptor:$versions.okhttp"
+okHttp.okhttp3= "com.squareup.okhttp3:okhttp:$versions.okhttp"
+config.okHttp = okHttp
+
+//图片加载
+def glide = [:]
+glide.lib = "com.github.bumptech.glide:glide:$versions.glide"
+glide.compiler = "com.github.bumptech.glide:compiler:$versions.glide"
+glide.okhttp3 = "com.github.bumptech.glide:okhttp3-integration:$versions.glide"
+config.glide = glide
+
+//网络请求封装
+def retrofit = [:]
+retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.rxJava = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+config.retrofit = retrofit
+
+config.rxjava2 = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"
+config.rxAndroid = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+
+def dagger = [:]
+dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
+dagger.android = "com.google.dagger:dagger-android:$versions.dagger"
+dagger.androidSupport = "com.google.dagger:dagger-android-support:$versions.dagger"
+dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
+dagger.androidSupportCompiler = "com.google.dagger:dagger-android-processor:$versions.dagger"
+config.dagger = dagger
+
+//中育自己的jar包
+def zykj = [:]
+zykj.base = "com.zykj.android:base:$versions.zykjBase"
+zykj.utils = "com.zykj.android:utils:$versions.zykjUtils"
+zykj.messageClient = "com.zykj.android:message-client:$versions.zykjMessageClient"
+zykj.messageServer = "com.zykj.android:message-server:$versions.zykjMessageServer"
+zykj.camera = "com.zykj.android:camera:$versions.zykjCamera"
+zykj.sketch = "com.zykj.android:sketch:$versions.zykjSketch"
+config.zykj = zykj
+
+//数据解析协议
+def proto = [:]
+proto.protobuf = "com.google.protobuf:protobuf-java:$versions.protobuf"
+proto.protoc = "com.google.protobuf:protoc:$versions.protoc"
+config.proto = proto
+
+//友盟
+def umeng = [:]
+umeng.common = "com.umeng.umsdk:common:$versions.umeng_common"
+umeng.analytics = "com.umeng.umsdk:analytics:$versions.umeng_analytics"
+config.umeng = umeng
+
+//解压和压缩
+config.zip = "org.zeroturnaround:zt-zip:$versions.zip"
+config.compress = "org.apache.commons:commons-compress:$versions.compress"
+
+config.gson = "com.google.code.gson:gson:$versions.gson"
+config.permission = "com.github.tbruyelle:rxpermissions:$versions.permission"
+config.logger = "com.orhanobut:logger:$versions.logger"
+config.chart = "com.github.PhilJay:MPAndroidChart:$versions.chart"
+config.calendar = "com.prolificinteractive:material-calendarview:$versions.calendar"
+
+//router
+config.arouterApi = "com.alibaba:arouter-api:$versions.arouter_api"
+config.arouterCompiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler"
+
+//单元测试
+config.junit = "junit:junit:$versions.junit"
+config.testKotlin = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+config.testRunner = "androidx.test:runner:$versions.test_runner"
+config.testExt = "androidx.test.ext:junit:$versions.test_ext"
+config.testEspresso = "androidx.test.espresso:espresso-core:$versions.test_espresso"
+
+def buildVersion = [:]
+buildVersion.compileSdkVersion = 28
+buildVersion.buildToolsVersion = "28.0.3"
+buildVersion.minSdkVersion = 19
+buildVersion.targetSdkVersion =  28
+
+def sign = [:]
+sign.keyAlias = "zhangmy"
+sign.keyPassword = "zhangmy"
+sign.storePassword = "zhangmy"
+
+static def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.jcenter()
+    handler.mavenCentral()
+
+    handler.maven { url "https://jitpack.io" }
+    handler.maven { url "http://maven.icm.edu.pl/artifactory/repo/" }
+    handler.maven { url "https://dl.bintray.com/umsdk/release" }
+    handler.maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    handler.maven {
+        url "http://172.16.168.172:9015/DefaultCollection/_packaging/Ezy/maven/v1"
+        credentials {
+            username "aar"
+            password "ngackuesyirccvj33xube4wrxlxk5pf4bm6nbhzqimolpb2iwwwa"
+        }
+    }
+}
+
+ext.dependence = config
+ext.buildVersion = buildVersion
+ext.sign = sign
+ext.addRepos = this.&addRepos
